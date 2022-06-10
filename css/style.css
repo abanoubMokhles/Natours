@@ -112,6 +112,10 @@ body {
   transform: scaleY(1.6) scaleX(1.2);
   opacity: 0;
 }
+.btn-animated {
+  animation: goUp 1s ease-out 1s;
+  animation-fill-mode: backwards;
+}
 /*========================
     Animations Styles
 ========================*/
@@ -139,5 +143,15 @@ body {
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+@keyframes goUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
